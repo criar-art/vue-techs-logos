@@ -47,18 +47,28 @@ const techs = [
   { name: 'Git',         icon: IconGit,        url: 'https://git-scm.com' }
 ];
 
-function toLowerCase (text) {
-  return String(text).replaceAll(' ', '').toLowerCase();
+const props = defineProps(['list', 'name'])
+
+const getTech = (name) => {
+  return techs.find(item =>item.name.toLowerCase() == name.toLowerCase())
 }
 </script>
 
 <template>
-   <section class="techs">
-    <figure class="tech-container" v-for="tech of techs" :key="tech.name">
-      <component :is="tech.icon" />
-      <figcaption>{{ tech.name }}</figcaption>
-    </figure>
-  </section>
+  <template v-if="list == 'full'">
+    <section class="techs">
+     <figure class="tech-container" v-for="tech of techs" :key="tech.name">
+       <component :is="tech.icon" />
+       <figcaption>{{ tech.name }}</figcaption>
+     </figure>
+   </section>
+  </template>
+  <template v-if="name && getTech(name)">
+    <figure class="tech-container">
+       <component :is="getTech(name).icon" />
+       <figcaption>{{ getTech(name).name }}</figcaption>
+     </figure>
+  </template>
 </template>
 
 <style lang="scss" scoped>
@@ -66,7 +76,6 @@ function toLowerCase (text) {
   display: flex;
   flex-wrap: wrap;
   clear: both;
-  margin-top: 4rem;
   align-items: center;
   justify-content: space-around;
 }
@@ -78,6 +87,10 @@ function toLowerCase (text) {
   border-radius: 8px;
   transition: .2s all;
   text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   &:hover {
     transform: scale(1.1);
   }

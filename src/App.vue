@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import pkg from '../package.json';
 import HelloWorld from './components/HelloWorld.vue'
-import Techs from './components/Techs.vue'
+import Tech from './components/Tech.vue'
 
 const appVersion: string = pkg.version;
 </script>
@@ -16,8 +16,14 @@ const appVersion: string = pkg.version;
   </header>
 
   <main>
-    <h1>List of technologies</h1>
-    <Techs />
+    <h2>individual tech</h2>
+    <Tech name="vue" />
+    <Tech name="react" />
+    <Tech name="angular" />
+    <Tech name="ember" />
+    <Tech name="svelte" />
+    <h2>List of technologies</h2>
+    <Tech list="full" />
   </main>
 </template>
 
