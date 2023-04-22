@@ -1,7 +1,19 @@
 {
-  "name": "technologies",
-  "version": "0.0.1",
-  "private": true,
+  "name": "vue-techs-logos",
+  "version": "0.0.4",
+  "private": false,
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vue-techs-logos.umd.cjs",
+  "module": "./dist/vue-techs-logos.js",
+  "types": "./dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-techs-logos.js",
+      "require": "./dist/vue-techs-logos.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -20,7 +32,7 @@
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^21.1.0",
-    "@types/node": "^18.14.2",
+    "@types/node": "^18.15.13",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-typescript": "^11.0.2",
     "@vue/test-utils": "^2.3.0",
