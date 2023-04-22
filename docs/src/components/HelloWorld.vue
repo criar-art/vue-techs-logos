@@ -9,7 +9,7 @@ defineProps<{
     <h1 class="green">{{ msg }}</h1>
     <h3>
       You’ve successfully run this project
-      <a href="https://github.com/criar-art/technologies" target="_blank" rel="noopener">criart.art/technologies</a>
+      <a href="https://github.com/criar-art/vue-techs-logos" target="_blank" rel="noopener">criart.art/vue-techs-logos</a>
     </h3>
   </div>
 </template>
