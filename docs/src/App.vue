@@ -2,7 +2,6 @@
 import pkg from '../../package.json';
 import HelloWorld from './components/HelloWorld.vue'
 import VueTechsLogos from 'vue-techs-logos'
-import 'vue-techs-logos/dist/style.css'
 
 const appVersion: string = pkg.version;
 </script>
