@@ -56,9 +56,10 @@ const getTech = (name) => {
 
 <template>
   <template v-if="list == 'full'">
-    <section class="techs" :class="[props.class]">
+    <section class="techs" :class="[props.classm]">
       <figure
         class="tech-container"
+        :class="[tech.name.toLocaleLowerCase()]"
         :style="{ width: props.size ? props.size : '100px' }"
         v-for="tech of techs" :key="tech.name"
       >
@@ -72,7 +73,7 @@ const getTech = (name) => {
   <template v-if="name && getTech(name)">
     <figure
       class="tech-container"
-      :class="[props.class]"
+      :class="[props.class, getTech(name).name]"
       :style="{ width: props.size ? props.size : '100px' }"
     >
       <component :is="getTech(name).icon" />
@@ -115,5 +116,4 @@ const getTech = (name) => {
     }
   }
 }
-
 </style>

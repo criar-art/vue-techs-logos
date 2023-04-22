@@ -1,6 +1,6 @@
 {
   "name": "vue-techs-logos",
-  "version": "0.0.47",
+  "version": "0.0.48",
   "private": false,
   "type": "module",
   "files": ["dist"],
