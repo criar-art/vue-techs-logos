@@ -47,7 +47,7 @@ const techs = [
   { name: 'Git',         icon: IconGit,        url: 'https://git-scm.com' }
 ];
 
-const props = defineProps(['list', 'name'])
+const props = defineProps(['list', 'name', 'size', 'label', 'hiddenLabel', 'class'])
 
 const getTech = (name) => {
   return techs.find(item =>item.name.toLowerCase() == name.toLowerCase())
@@ -56,18 +56,31 @@ const getTech = (name) => {
 
 <template>
   <template v-if="list == 'full'">
-    <section class="techs">
-     <figure class="tech-container" v-for="tech of techs" :key="tech.name">
-       <component :is="tech.icon" />
-       <figcaption>{{ tech.name }}</figcaption>
+    <section class="techs" :class="[props.class]">
+      <figure
+        class="tech-container"
+        :style="{ width: props.size ? props.size : '100px' }"
+        v-for="tech of techs" :key="tech.name"
+      >
+        <component :is="tech.icon" />
+        <template v-if="!hiddenLabel">
+          <figcaption>{{ tech.name }}</figcaption>
+        </template>
      </figure>
    </section>
   </template>
   <template v-if="name && getTech(name)">
-    <figure class="tech-container">
-       <component :is="getTech(name).icon" />
-       <figcaption>{{ getTech(name).name }}</figcaption>
-     </figure>
+    <figure
+      class="tech-container"
+      :class="[props.class]"
+      :style="{ width: props.size ? props.size : '100px' }"
+    >
+      <component :is="getTech(name).icon" />
+      <template v-if="!hiddenLabel">
+        <figcaption v-if="props.label">{{ props.label }}</figcaption>
+        <figcaption v-else>{{ getTech(name).name }}</figcaption>
+      </template>
+    </figure>
   </template>
 </template>
 
