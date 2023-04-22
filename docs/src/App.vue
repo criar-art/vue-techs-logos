@@ -10,7 +10,7 @@ const appVersion: string = pkg.version;
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
     <div class="wrapper">
-      <HelloWorld :msg="`List ${appVersion}`" />
+      <HelloWorld :msg="`vue-techs-logos@${appVersion}`" />
       <div class="code-content"> 
         <h1>Install</h1>
         <code class="code-wrapper">
