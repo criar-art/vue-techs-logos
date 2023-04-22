@@ -3,10 +3,12 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import svgLoader from 'vite-svg-loader'
+import VitePluginStyleInject from 'vite-plugin-style-inject'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    VitePluginStyleInject(),
     vue(),
     svgLoader({
       svgo: false

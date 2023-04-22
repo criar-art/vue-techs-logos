@@ -1,14 +1,16 @@
 {
   "name": "vue-techs-logos",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/vue-techs-logos.umd.cjs",
   "module": "./dist/vue-techs-logos.js",
   "types": "./dist/main.d.ts",
   "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
-  "repository":"https://github.com/criar-art/vue-techs-logos",
+  "repository": "https://github.com/criar-art/vue-techs-logos",
   "bugs": {
     "url": "https://github.com/criar-art/vue-techs-logos/issues"
   },
@@ -47,6 +49,7 @@
     "start-server-and-test": "^2.0.0",
     "typescript": "~4.8.4",
     "vite": "^4.1.4",
+    "vite-plugin-style-inject": "^0.0.1",
     "vite-svg-loader": "^4.0.0",
     "vitest": "^0.29.1",
     "vue-tsc": "^1.2.0"

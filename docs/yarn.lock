@@ -3679,10 +3679,10 @@ vue-eslint-parser@^9.0.0, vue-eslint-parser@^9.0.1:
     lodash "^4.17.21"
     semver "^7.3.6"
 
-vue-techs-logos@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.npmjs.org/vue-techs-logos/-/vue-techs-logos-0.0.5.tgz"
-  integrity sha512-YziEko3DzJm4inoW/f3vOHT79BJYAxUbQjLJsRebE3Bvj5s+Drj3IolGzT2BpA+UvWClFb8MBxFPTtW8iBCeAQ==
+vue-techs-logos@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/vue-techs-logos/-/vue-techs-logos-0.0.6.tgz"
+  integrity sha512-OvfQCBSluVpwuHzDZOAoEQPwlzPmTbKuE4NMQtAso+8XvJ+SO+SxahwDzuu8++HwlZiOd0B5Fw2Uxl36EC///Q==
   dependencies:
     sass "^1.61.0"
     vue "^3.2.47"
