@@ -62,7 +62,7 @@ const appVersion: string = pkg.version;
   justify-content: flex-end;
   text-align: center;
   flex-direction: column;
-  background-color: #000;
+  background: var(--color-background-soft);
   border-radius: 8px;
   padding: 1rem;
 }
