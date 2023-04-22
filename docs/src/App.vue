@@ -13,14 +13,24 @@ const appVersion: string = pkg.version;
     <div class="wrapper">
       <HelloWorld :msg="`List ${appVersion}`" />
       <div class="code-content"> 
+        <h1>Install</h1>
+        <code class="code-wrapper">
+          {{`npm run install vue-techs-logos`}}
+          ou
+          {{`yarn add vue-techs-logos`}}
+        </code>
+        <p>Before instaal, do you need import this component.</p>
+        <code class="code-wrapper">
+          {{`import VueTechsLogos from 'vue-techs-logos'`}}
+        </code>
         <h1>Usage</h1>
         <h4>Use single component</h4>
         <code class="code-wrapper">
-          {{`<Tech name="vue" />`}}
+          {{`<VueTechsLogos name="vue" />`}}
         </code>
         <h4>Use list of components</h4>
         <code class="code-wrapper">
-          {{`<Tech list="full" />`}}
+          {{`<VueTechsLogos list="full" />`}}
         </code>
       </div>
     </div>
