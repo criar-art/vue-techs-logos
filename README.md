@@ -7,10 +7,23 @@ Install
 npm install vue-techs-logos
 ```
 
-Usage
-```js
+Usage basic
+```vue
 import VueTechsLogs from 'vue-techs-logos';
 
-<VueTechsLogos class="teste" name="javascript" label="Lucas" />
-<VueTechsLogos class="teste" list="full" />
+// single icon
+<VueTechsLogos class="single-logo" name="javascript" />
+
+// list all logos
+<VueTechsLogos class="list-logos" list="full" />
+
+// Hidden label
+<VueTechsLogos name="javascript" :hiddenLabel="true" />
+<VueTechsLogos list="full" :hiddenLabel="true" />
+
+// single change label name
+<VueTechsLogos name="javascript" label="New JavaScript" />
+
+// Modification of size component
+<VueTechsLogos class="teste" name="javascript" size="220px" />
 ```
