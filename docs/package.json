@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "sass": "^1.62.0",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-techs-logos": "^0.0.49"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
