@@ -1,12 +1,17 @@
 {
   "name": "vue-techs-logos",
-  "version": "0.0.4",
+  "version": "0.0.41",
   "private": false,
   "type": "module",
   "files": ["dist"],
   "main": "./dist/vue-techs-logos.umd.cjs",
   "module": "./dist/vue-techs-logos.js",
   "types": "./dist/main.d.ts",
+  "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
+  "repository":"https://github.com/criar-art/vue-techs-logos",
+  "bugs": {
+    "url": "https://github.com/criar-art/vue-techs-logos/issues"
+  },
   "exports": {
     ".": {
       "import": "./dist/vue-techs-logos.js",
