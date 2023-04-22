@@ -27,14 +27,14 @@ const appVersion: string = pkg.version;
   </header>
 
   <main>
+    <h2>List of technologies</h2>
+    <VueTechsLogos list="full" />
     <h2>Single tech</h2>
     <VueTechsLogos name="vue" />
     <VueTechsLogos name="react" />
     <VueTechsLogos name="angular" />
     <VueTechsLogos name="ember" />
     <VueTechsLogos name="svelte" />
-    <h2>List of technologies</h2>
-    <VueTechsLogos list="full" />
   </main>
 </template>
 
