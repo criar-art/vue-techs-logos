@@ -39,15 +39,33 @@ const appVersion: string = pkg.version;
     <h2>List of technologies</h2>
     <VueTechsLogos list="full" />
     <h2>Single tech</h2>
-    <VueTechsLogos name="vue" />
-    <VueTechsLogos name="react" />
-    <VueTechsLogos name="angular" />
-    <VueTechsLogos name="ember" />
-    <VueTechsLogos name="svelte" />
+    <section class="single-section">
+      <VueTechsLogos name="vue" />
+      <VueTechsLogos name="react" />
+      <VueTechsLogos name="angular" />
+      <VueTechsLogos name="ember" />
+      <VueTechsLogos name="svelte" />
+    </section>
   </main>
 </template>
 
-<style scoped>
+<style>
+.single-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 1rem;
+}
+.single-section figure {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  flex-direction: column;
+  background-color: #000;
+  border-radius: 8px;
+  padding: 1rem;
+}
 .code-wrapper {
   display: flex;
   flex-wrap: wrap;
