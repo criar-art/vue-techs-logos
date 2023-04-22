@@ -85,7 +85,7 @@ const getTech = (name) => {
   </template>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .techs {
   display: flex;
   flex-wrap: wrap;
