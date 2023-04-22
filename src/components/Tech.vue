@@ -88,28 +88,32 @@ const getTech = (name) => {
 .techs {
   display: flex;
   flex-wrap: wrap;
-  clear: both;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.tech-container {
-  background: rgba(250, 250, 250, .2);
-  margin: .5rem;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: .2s all;
-  text-align: center;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  &:hover {
-    transform: scale(1.1);
+  gap: 20px;
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
   }
-  svg {
-    width: 100px;
-    height: 100px;
+  figure, figure.tech-container {
+    background: rgba(0,0,0, .05);
+    border-radius: 100px;
+    width: 120px !important;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:hover {
+      transform: scale(1.1);
+    }
+    svg {
+      height: 50px;
+      margin-bottom: .2rem;
+    }
   }
 }
+
 </style>
