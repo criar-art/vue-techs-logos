@@ -15,10 +15,12 @@ const appVersion: string = pkg.version;
         <h1>Install</h1>
         <code class="code-wrapper">
           {{`npm run install vue-techs-logos`}}
-          ou
+        </code>
+        <p>ou</p>
+        <code class="code-wrapper">
           {{`yarn add vue-techs-logos`}}
         </code>
-        <p>Before instaal, do you need import this component.</p>
+        <p>Before install, do you need import this component.</p>
         <code class="code-wrapper">
           {{`import VueTechsLogos from 'vue-techs-logos'`}}
         </code>
@@ -92,7 +94,14 @@ const appVersion: string = pkg.version;
   flex: 1;
   white-space: pre;
   margin: 1rem 0;
-  color: red;
+  color: hsla(160, 100%, 37%, 1);
+  padding: 1rem;
+  background: var(--color-background-soft);
+  overflow: auto;
+}
+
+.code-wrapper:hover {
+  background: #000;
 }
 
 header {
@@ -103,6 +112,7 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+  font-size: ;
 }
 
 @media (max-width: 1024px) {
