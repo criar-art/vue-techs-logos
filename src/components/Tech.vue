@@ -40,6 +40,13 @@ import IconPlaystore from '@/assets/techs/playstore.svg?component'
 import IconTumblr from '@/assets/techs/tumblr.svg?component'
 import IconCodepen from '@/assets/techs/codepen.svg?component'
 import IconYotube from '@/assets/techs/youtube.svg?component'
+import IconJava from '@/assets/techs/java.svg?component'
+import IconPwa from '@/assets/techs/pwa.svg?component'
+import IconTailwind from '@/assets/techs/tailwind.svg?component'
+import IconNpm from '@/assets/techs/npm.svg?component'
+import IconEdge from '@/assets/techs/edge.svg?component'
+import IconCpp from '@/assets/techs/cpp.svg?component'
+import IconCsharp from '@/assets/techs/csharp.svg?component'
 
 const techs = [
   { name: 'Android',     icon: IconAndroid,    url: 'https://www.android.com' },
@@ -47,16 +54,21 @@ const techs = [
   { name: 'Linux',       icon: IconLinux,      url: 'https://ubuntu.com' },
   { name: 'Microsoft',   icon: IconMicrosoft,  url: 'https://www.microsoft.com' },
   { name: 'PlayStore',   icon: IconPlaystore,  url: 'https://play.google.com' },
+  { name: 'PWA',         icon: IconPwa,        url: 'https://web.dev/progressive-web-apps' },
   { name: 'HTML',        icon: IconHTML,       url: 'https://developer.mozilla.org/en-US/docs/Glossary/HTML5' },
   { name: 'CSS',         icon: IconCSS,        url: 'https://developer.mozilla.org/en-US/docs/Glossary/CSS' },
   { name: 'JavaScript',  icon: IconJavascript, url: 'https://developer.mozilla.org/en-US/docs/Glossary/Javascript' },
   { name: 'Typescript',  icon: IconTypescript, url: 'https://www.typescriptlang.org/docs' },
   { name: 'Node',        icon: IconNode,       url: 'https://nodejs.org/en' },
+  { name: 'Java',        icon: IconJava,       url: 'https://www.java.com' },
   { name: 'Ruby',        icon: IconRuby,       url: 'https://www.ruby-lang.org/en' },
   { name: 'Python',      icon: IconPython,     url: 'https://docs.python.org' },
   { name: 'Swift',       icon: IconSwift,      url: 'https://developer.apple.com/swift' },
+  { name: 'C#',          icon: IconCsharp,     url: 'https://learn.microsoft.com/en-us/dotnet/csharp' },
+  { name: 'C++',         icon: IconCpp,  url: 'https://learn.microsoft.com/en-us/dotnet/csharp' },
   { name: 'VisualCode',  icon: IconVisualCode, url: 'https://code.visualstudio.com' },
   { name: 'Github',      icon: IconGithub,     url: 'https://github.com/criar-art' },
+  { name: 'NPM',         icon: IconNpm,        url: 'npmjs.com/package/vue-techs-logos' },
   { name: 'YouTube',     icon: IconYotube,     url: 'https://youtube.com' },
   { name: 'Wordpress',   icon: IconWordpress,  url: 'https://wordpress.com' },
   { name: 'Tumblr',      icon: IconTumblr,     url: 'https://www.tumblr.com' },
@@ -67,6 +79,7 @@ const techs = [
   { name: 'Svelte',      icon: IconSvelte,     url: 'https://svelte.dev' },
   { name: 'Ember',       icon: IconEmber,      url: 'https://emberjs.com' },
   { name: 'Stylus',      icon: IconStylus,     url: 'https://stylus-lang.com' },
+  { name: 'Tailwind',    icon: IconTailwind,   url: 'https://tailwindcss.com' },
   { name: 'Less',        icon: IconLess,       url: 'https://lesscss.org' },
   { name: 'Sass',        icon: IconSass,       url: 'https://sass-lang.com' },
   { name: 'Webpack',     icon: IconWebpack,    url: 'https://webpack.js.org' },
@@ -81,6 +94,7 @@ const techs = [
   { name: 'Cypress',     icon: IconCypress,    url: 'https://www.cypress.io' },
   { name: 'Mozilla',     icon: IconMozilla,    url: 'https://www.mozilla.org' },
   { name: 'Safari',      icon: IconSafari,     url: 'https://www.apple.com/br/safari' },
+  { name: 'Edge',        icon: IconEdge,       url: 'https://www.microsoft.com/pt-br/edge' },
   { name: 'Chrome',      icon: IconChrome,     url: 'https://www.google.com/intl/pt-BR/chrome' },
   { name: 'Git',         icon: IconGit,        url: 'https://git-scm.com' }
 ];
