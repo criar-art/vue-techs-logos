@@ -85,7 +85,7 @@ const techs = [
   { name: 'Git',         icon: IconGit,        url: 'https://git-scm.com' }
 ];
 
-const props = defineProps(['list', 'name', 'size', 'label', 'hiddenLabel', 'class'])
+const props = defineProps(['list', 'name', 'size', 'label', 'hiddenLabel', 'class', 'hiddenLogos'])
 
 const getTech = (name) => {
   return techs.find(item => item.name.toLowerCase() == name.toLowerCase())
@@ -94,6 +94,9 @@ const getTech = (name) => {
 const getTechs = (items) => techs.filter((tech => items.find(item => {
   return tech.name.toLowerCase() == item.toLowerCase()
 })))
+
+const hiddenTechs = (items) => techs.filter(item => !items.includes(item.name.toLocaleLowerCase()))
+
 </script>
 
 <template>
@@ -115,17 +118,33 @@ const getTechs = (items) => techs.filter((tech => items.find(item => {
   
   <template v-if="list == 'full'">
     <section class="techs" :class="[props.class]">
-      <figure
-        class="tech-container"
-        :class="[tech.name.toLocaleLowerCase()]"
-        :style="{ width: props.size ? props.size : '100px' }"
-        v-for="tech of techs" :key="tech.name"
-      >
-        <component :is="tech.icon" />
-        <template v-if="!hiddenLabel">
-          <figcaption>{{ tech.name }}</figcaption>
-        </template>
-     </figure>
+      <template v-if="hiddenLogos">
+        <figure
+          class="tech-container"
+          :class="[tech.name.toLocaleLowerCase()]"
+          :style="{ width: props.size ? props.size : '100px' }"
+          v-for="tech of hiddenTechs(hiddenLogos)" :key="tech.name"
+        >
+          <component :is="tech.icon" />
+          <template v-if="!hiddenLabel">
+            <figcaption>{{ tech.name }}</figcaption>
+          </template>
+        </figure> 
+      </template>
+      <template v-else>
+        <figure
+          class="tech-container"
+          :class="[tech.name.toLocaleLowerCase()]"
+          :style="{ width: props.size ? props.size : '100px' }"
+          v-for="tech of techs" :key="tech.name"
+        >
+          <component :is="tech.icon" />
+          <template v-if="!hiddenLabel">
+            <figcaption>{{ tech.name }}</figcaption>
+          </template>
+       </figure>
+      </template>
+
    </section>
   </template>
   <template v-if="name && getTech(name) && !list">
