@@ -1,3 +1,3 @@
-import VueTechsLogos from './components/Tech.vue'
+import VueTechsLogos from './components/VueTechsLogos.vue'
 
 export default VueTechsLogos

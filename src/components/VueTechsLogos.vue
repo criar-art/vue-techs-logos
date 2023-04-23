@@ -1,3 +1,100 @@
+<template>
+  <template v-if="name && getTech(name) && !list">
+    <figure
+      class="tech-container"
+      :class="[props.class, getTech(name).name]"
+      :style="{ width: props.size ? props.size : '100px' }"
+    >
+      <component :is="getTech(name).icon" />
+      <template v-if="!hiddenLabel">
+        <figcaption v-if="props.label">{{ props.label }}</figcaption>
+        <figcaption v-else>{{ getTech(name).name }}</figcaption>
+      </template>
+    </figure>
+  </template>
+  <template v-else>
+    <template v-if="list">
+      <section class="techs" :class="[props.class]">
+          <figure
+            class="tech-container"
+            :class="[tech.name.toLocaleLowerCase()]"
+            :style="{ width: props.size ? props.size : '100px' }"
+            v-for="tech of getTechs(list)" :key="tech.name"
+          >
+            <component :is="tech.icon" />
+            <template v-if="!hiddenLabel">
+              <figcaption>{{ tech.name }}</figcaption>
+            </template>
+        </figure>
+      </section>
+    </template>
+    <template v-else>
+      <section class="techs" :class="[props.class]">
+        <template v-if="hiddenLogos">
+          <figure
+            class="tech-container"
+            :class="[tech.name.toLocaleLowerCase()]"
+            :style="{ width: props.size ? props.size : '100px' }"
+            v-for="tech of hiddenTechs(hiddenLogos)" :key="tech.name"
+          >
+            <component :is="tech.icon" />
+            <template v-if="!hiddenLabel">
+              <figcaption>{{ tech.name }}</figcaption>
+            </template>
+          </figure> 
+        </template>
+        <template v-else>
+          <figure
+            class="tech-container"
+            :class="[tech.name.toLocaleLowerCase()]"
+            :style="{ width: props.size ? props.size : '100px' }"
+            v-for="tech of techs" :key="tech.name"
+          >
+            <component :is="tech.icon" />
+            <template v-if="!hiddenLabel">
+              <figcaption>{{ tech.name }}</figcaption>
+            </template>
+        </figure>
+        </template>
+
+    </section>
+    </template>
+  </template>
+</template>
+
+<style lang="scss" scoped>
+.techs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  figure, figure.tech-container {
+    background: rgba(0,0,0, .05);
+    border-radius: 100px;
+    width: 120px !important;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &:hover {
+      transform: scale(1.1);
+    }
+    svg {
+      height: 50px;
+      margin-bottom: .2rem;
+    }
+  }
+}
+</style>
+
 <script setup>
 import IconAndroid from '@/assets/techs/android.svg?component'
 import IconApple from '@/assets/techs/apple.svg?component'
@@ -110,101 +207,4 @@ const getTechs = (items) => techs.filter((tech => items.find(item => {
 })))
 
 const hiddenTechs = (items) => techs.filter(item => !items.includes(item.name.toLocaleLowerCase()))
-
 </script>
-
-<template>
-  <template v-if="list && list !== 'full'">
-    <section class="techs" :class="[props.class]">
-        <figure
-          class="tech-container"
-          :class="[tech.name.toLocaleLowerCase()]"
-          :style="{ width: props.size ? props.size : '100px' }"
-          v-for="tech of getTechs(list)" :key="tech.name"
-        >
-          <component :is="tech.icon" />
-          <template v-if="!hiddenLabel">
-            <figcaption>{{ tech.name }}</figcaption>
-          </template>
-       </figure>
-     </section>
-  </template>
-  
-  <template v-if="list == 'full'">
-    <section class="techs" :class="[props.class]">
-      <template v-if="hiddenLogos">
-        <figure
-          class="tech-container"
-          :class="[tech.name.toLocaleLowerCase()]"
-          :style="{ width: props.size ? props.size : '100px' }"
-          v-for="tech of hiddenTechs(hiddenLogos)" :key="tech.name"
-        >
-          <component :is="tech.icon" />
-          <template v-if="!hiddenLabel">
-            <figcaption>{{ tech.name }}</figcaption>
-          </template>
-        </figure> 
-      </template>
-      <template v-else>
-        <figure
-          class="tech-container"
-          :class="[tech.name.toLocaleLowerCase()]"
-          :style="{ width: props.size ? props.size : '100px' }"
-          v-for="tech of techs" :key="tech.name"
-        >
-          <component :is="tech.icon" />
-          <template v-if="!hiddenLabel">
-            <figcaption>{{ tech.name }}</figcaption>
-          </template>
-       </figure>
-      </template>
-
-   </section>
-  </template>
-  <template v-if="name && getTech(name) && !list">
-    <figure
-      class="tech-container"
-      :class="[props.class, getTech(name).name]"
-      :style="{ width: props.size ? props.size : '100px' }"
-    >
-      <component :is="getTech(name).icon" />
-      <template v-if="!hiddenLabel">
-        <figcaption v-if="props.label">{{ props.label }}</figcaption>
-        <figcaption v-else>{{ getTech(name).name }}</figcaption>
-      </template>
-    </figure>
-  </template>
-</template>
-
-<style lang="scss" scoped>
-.techs {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  .title {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-  }
-  figure, figure.tech-container {
-    background: rgba(0,0,0, .05);
-    border-radius: 100px;
-    width: 120px !important;
-    height: 120px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    &:hover {
-      transform: scale(1.1);
-    }
-    svg {
-      height: 50px;
-      margin-bottom: .2rem;
-    }
-  }
-}
-</style>
