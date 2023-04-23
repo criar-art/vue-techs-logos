@@ -14,8 +14,11 @@ import VueTechsLogs from 'vue-techs-logos';
 // single icon
 <VueTechsLogos class="single-logo" name="javascript" />
 
+// list limited logos
+<VueTechsLogos class="limted-logos" :list="['vue','javascript', 'react', 'angular']" />
+
 // list all logos
-<VueTechsLogos class="list-logos" list="full" />
+<VueTechsLogos class="full-logos" list="full" />
 
 // Hidden label
 <VueTechsLogos name="javascript" :hiddenLabel="true" />
