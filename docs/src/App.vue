@@ -36,9 +36,24 @@ const appVersion: string = pkg.version;
   </header>
 
   <main>
-    <h2>List of technologies</h2>
+    <h2>List of technologies limited</h2>
+    <code class="code-wrapper">
+      {{`<VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />`}}
+    </code>
+    <VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />
+    <h2>List of technologies full</h2>
+    <code class="code-wrapper">
+      {{`<VueTechsLogos list="full" />`}}
+    </code>
     <VueTechsLogos list="full" />
     <h2>Single tech</h2>
+    <code class="code-wrapper">
+{{`<VueTechsLogos name="vue" />
+<VueTechsLogos name="react" />
+<VueTechsLogos name="angular" />
+<VueTechsLogos name="ember" />
+<VueTechsLogos name="svelte" />`}}
+    </code>
     <section class="single-section">
       <VueTechsLogos name="vue" />
       <VueTechsLogos name="react" />
