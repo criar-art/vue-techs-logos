@@ -88,13 +88,33 @@ const techs = [
 const props = defineProps(['list', 'name', 'size', 'label', 'hiddenLabel', 'class'])
 
 const getTech = (name) => {
-  return techs.find(item =>item.name.toLowerCase() == name.toLowerCase())
+  return techs.find(item => item.name.toLowerCase() == name.toLowerCase())
 }
+
+const getTechs = (items) => techs.filter((tech => items.find(item => {
+  return tech.name.toLowerCase() == item.toLowerCase()
+})))
 </script>
 
 <template>
+  <template v-if="list && list !== 'full'">
+    <section class="techs" :class="[props.class]">
+        <figure
+          class="tech-container"
+          :class="[tech.name.toLocaleLowerCase()]"
+          :style="{ width: props.size ? props.size : '100px' }"
+          v-for="tech of getTechs(list)" :key="tech.name"
+        >
+          <component :is="tech.icon" />
+          <template v-if="!hiddenLabel">
+            <figcaption>{{ tech.name }}</figcaption>
+          </template>
+       </figure>
+     </section>
+  </template>
+  
   <template v-if="list == 'full'">
-    <section class="techs" :class="[props.classm]">
+    <section class="techs" :class="[props.class]">
       <figure
         class="tech-container"
         :class="[tech.name.toLocaleLowerCase()]"
@@ -108,7 +128,7 @@ const getTech = (name) => {
      </figure>
    </section>
   </template>
-  <template v-if="name && getTech(name)">
+  <template v-if="name && getTech(name) && !list">
     <figure
       class="tech-container"
       :class="[props.class, getTech(name).name]"
