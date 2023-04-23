@@ -45,7 +45,12 @@ const appVersion: string = pkg.version;
     <code class="code-wrapper">
       {{`<VueTechsLogos list="full" />`}}
     </code>
-    <VueTechsLogos list="full" />
+    <VueTechsLogos list="full"/>
+    <h2>List of technologies full with hiddenLogos</h2>
+    <code class="code-wrapper">
+      {{`<VueTechsLogos list="full" :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />`}}
+    </code>
+    <VueTechsLogos list="full" :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />
     <h2>Single tech</h2>
     <code class="code-wrapper">
 {{`<VueTechsLogos name="vue" />

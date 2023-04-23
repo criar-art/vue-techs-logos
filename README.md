@@ -20,6 +20,9 @@ import VueTechsLogs from 'vue-techs-logos';
 // list all logos
 <VueTechsLogos class="full-logos" list="full" />
 
+// list all logos with hiddenLogos
+<VueTechsLogos list="full" :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />
+
 // Hidden label
 <VueTechsLogos name="javascript" :hiddenLabel="true" />
 <VueTechsLogos list="full" :hiddenLabel="true" />
