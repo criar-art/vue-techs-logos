@@ -6,10 +6,9 @@
       :style="{ width: props.size ? props.size : '100px' }"
     >
       <component :is="getTech(name).icon" />
-      <template v-if="!hiddenLabel">
-        <figcaption v-if="props.label">{{ props.label }}</figcaption>
-        <figcaption v-else>{{ getTech(name).name }}</figcaption>
-      </template>
+      <figcaption :class="{ tooltip: hiddenLabel }">
+        {{ props.label ? props.label : getTech(name).name }}
+      </figcaption>
     </figure>
   </template>
   <template v-else>
@@ -22,9 +21,7 @@
             v-for="tech of getTechs(list)" :key="tech.name"
           >
             <component :is="tech.icon" />
-            <template v-if="!hiddenLabel">
-              <figcaption>{{ tech.name }}</figcaption>
-            </template>
+            <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
         </figure>
       </section>
     </template>
@@ -38,9 +35,7 @@
             v-for="tech of hiddenTechs(hiddenLogos)" :key="tech.name"
           >
             <component :is="tech.icon" />
-            <template v-if="!hiddenLabel">
-              <figcaption>{{ tech.name }}</figcaption>
-            </template>
+            <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
           </figure> 
         </template>
         <template v-else>
@@ -51,9 +46,7 @@
             v-for="tech of techs" :key="tech.name"
           >
             <component :is="tech.icon" />
-            <template v-if="!hiddenLabel">
-              <figcaption>{{ tech.name }}</figcaption>
-            </template>
+            <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
         </figure>
         </template>
 
@@ -86,10 +79,25 @@
     flex-direction: column;
     &:hover {
       transform: scale(1.1);
+      figcaption.tooltip {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
     svg {
       height: 50px;
       margin-bottom: .2rem;
+    }
+    figcaption.tooltip {
+      position: absolute;
+      bottom: 2%;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0;
+      transition: .3s all;
     }
   }
 }
