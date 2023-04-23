@@ -15,16 +15,13 @@ Usage basic
 import VueTechsLogs from 'vue-techs-logos';
 
 // single icon
-<VueTechsLogos class="single-logo" name="javascript" />
+<VueTechsLogos name="javascript" />
 
 // list limited logos
-<VueTechsLogos
-    class="limted-logos"
-    :list="['vue','javascript', 'react', 'angular']"
-/>
+<VueTechsLogos :list="['vue','javascript', 'react', 'angular']" />
 
 // list all logos
-<VueTechsLogos class="full-logos" />
+<VueTechsLogos />
 
 // list all logos with hiddenLogos
 <VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />
@@ -37,5 +34,5 @@ import VueTechsLogs from 'vue-techs-logos';
 <VueTechsLogos name="javascript" label="New JavaScript" />
 
 // Modification of size component
-<VueTechsLogos class="teste" name="javascript" size="220px" />
+<VueTechsLogos name="javascript" size="220px" />
 ```
