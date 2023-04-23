@@ -11,48 +11,37 @@ const appVersion: string = pkg.version;
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
     <div class="wrapper">
       <HelloWorld :msg="`vue-techs-logos@${appVersion}`" />
-      <div class="code-content"> 
-        <h1>Install</h1>
-        <code class="code-wrapper">
-          {{`npm run install vue-techs-logos`}}
-        </code>
-        <p>ou</p>
-        <code class="code-wrapper">
-          {{`yarn add vue-techs-logos`}}
-        </code>
-        <p>Before install, do you need import this component.</p>
-        <code class="code-wrapper">
-          {{`import VueTechsLogos from 'vue-techs-logos'`}}
-        </code>
-        <h1>Usage</h1>
-        <h4>Use single component</h4>
-        <code class="code-wrapper">
-          {{`<VueTechsLogos name="vue" />`}}
-        </code>
-        <h4>Use list of components</h4>
-        <code class="code-wrapper">
-          {{`<VueTechsLogos list="full" />`}}
-        </code>
+      <div class="code-content">
+        <div>
+          <h1>Install</h1>
+          <code class="code-wrapper">
+            {{`npm run install vue-techs-logos`}}
+          </code>
+          <p>ou</p>
+          <code class="code-wrapper">
+            {{`yarn add vue-techs-logos`}}
+          </code>
+          <p>Before install, do you need import this component.</p>
+          <code class="code-wrapper">
+            {{`import VueTechsLogos from 'vue-techs-logos'`}}
+          </code>
+        </div>
+        <div>
+          <h1>Usage</h1>
+          <h4>Use single component</h4>
+          <code class="code-wrapper">
+            {{`<VueTechsLogos name="vue" />`}}
+          </code>
+          <h4>Use list of components</h4>
+          <code class="code-wrapper">
+            {{`<VueTechsLogos />`}}
+          </code>
+        </div>
       </div>
     </div>
   </header>
 
   <main>
-    <h2>List of technologies limited</h2>
-    <code class="code-wrapper">
-      {{`<VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />`}}
-    </code>
-    <VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />
-    <h2>List of technologies full</h2>
-    <code class="code-wrapper">
-      {{`<VueTechsLogos list="full" />`}}
-    </code>
-    <VueTechsLogos list="full"/>
-    <h2>List of technologies full with hiddenLogos</h2>
-    <code class="code-wrapper">
-      {{`<VueTechsLogos list="full" :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />`}}
-    </code>
-    <VueTechsLogos list="full" :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />
     <h2>Single tech</h2>
     <code class="code-wrapper">
 {{`<VueTechsLogos name="vue" />
@@ -68,14 +57,36 @@ const appVersion: string = pkg.version;
       <VueTechsLogos name="ember" />
       <VueTechsLogos name="svelte" />
     </section>
+    <h2>List of technologies limited</h2>
+    <code class="code-wrapper">
+      {{`<VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />`}}
+    </code>
+    <VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />
+    <h2>List of technologies full</h2>
+    <code class="code-wrapper">
+      {{`<VueTechsLogos />`}}
+    </code>
+    <VueTechsLogos/>
+    <h2>List of technologies full with hiddenLogos</h2>
+    <code class="code-wrapper">
+      {{`<VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />`}}
+    </code>
+    <VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />
+    <h2>List of technologies full hidden labels</h2>
+    <code class="code-wrapper">
+      {{`<VueTechsLogos :hiddenLabel="true" />`}}
+    </code>
+    <VueTechsLogos :hiddenLabel="true" />
   </main>
 </template>
 
 <style>
+h2 {
+  margin: 4rem 0 1rem;
+}
 .single-section {
   display: flex;
   gap: 20px;
-  margin-top: 1rem;
 }
 .single-section figure {
   display: flex;
@@ -113,6 +124,11 @@ header {
   display: block;
   margin: 0 auto 2rem;
   font-size: ;
+}
+
+.code-content {
+  display: flex;
+  gap: 20px;
 }
 
 @media (max-width: 1024px) {
