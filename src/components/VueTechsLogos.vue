@@ -55,7 +55,8 @@
   </template>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+/* semantic color variables for this project */
 .techs {
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +69,7 @@
     margin-top: 2rem;
   }
   figure, figure.tech-container {
-    background: rgba(0,0,0, .05);
+    background: var(--vtl-background);
     border-radius: 100px;
     width: 120px !important;
     height: 120px;
@@ -91,14 +92,35 @@
     figcaption.tooltip {
       position: absolute;
       bottom: 2%;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+      background: var(--vtl-background-tooltip);
+      box-shadow: 0 4px 10px var(--vtl-shadow-tooltip);
       padding: 0.2rem 0.5rem;
       border-radius: 5px;
       pointer-events: none;
       opacity: 0;
       transition: .3s all;
+      color: var(--vtl-text);
     }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --vtl-background: rgba(0,0,0, .05);
+    --vtl-background-tooltip: #444;
+    --vtl-shadow-tooltip: rgba(0,0,0,.2);
+    --vtl-text: #fff;
+    --vtl-background-svg: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vtl-background: rgba(0,0,0, .5);
+    --vtl-background-tooltip: #fff;
+    --vtl-shadow-tooltip: rgba(0,0,0,.2);
+    --vtl-text: #000;
+    --vtl-background-svg: #fff;
   }
 }
 </style>
@@ -152,6 +174,9 @@ import IconNpm from '@/assets/techs/npm.svg?component'
 import IconEdge from '@/assets/techs/edge.svg?component'
 import IconCpp from '@/assets/techs/cpp.svg?component'
 import IconCsharp from '@/assets/techs/csharp.svg?component'
+import IconFirebase from '@/assets/techs/firebase.svg?component'
+import IconPhp from '@/assets/techs/firebase.svg?component'
+import IconMysql from '@/assets/techs/mysql.svg?component'
 
 const techs = [
   { name: 'Android',     icon: IconAndroid,    url: 'https://www.android.com' },
@@ -169,6 +194,7 @@ const techs = [
   { name: 'Ruby',        icon: IconRuby,       url: 'https://www.ruby-lang.org/en' },
   { name: 'Python',      icon: IconPython,     url: 'https://docs.python.org' },
   { name: 'Swift',       icon: IconSwift,      url: 'https://developer.apple.com/swift' },
+  { name: 'PHP',         icon: IconPhp,        url: 'https://www.php.net' },
   { name: 'C#',          icon: IconCsharp,     url: 'https://learn.microsoft.com/en-us/dotnet/csharp' },
   { name: 'C++',         icon: IconCpp,  url: 'https://learn.microsoft.com/en-us/dotnet/csharp' },
   { name: 'VisualCode',  icon: IconVisualCode, url: 'https://code.visualstudio.com' },
@@ -201,6 +227,8 @@ const techs = [
   { name: 'Safari',      icon: IconSafari,     url: 'https://www.apple.com/br/safari' },
   { name: 'Edge',        icon: IconEdge,       url: 'https://www.microsoft.com/pt-br/edge' },
   { name: 'Chrome',      icon: IconChrome,     url: 'https://www.google.com/intl/pt-BR/chrome' },
+  { name: 'MySQL',       icon: IconMysql,      url: 'https://www.mysql.com' },
+  { name: 'Firebase',    icon: IconFirebase,   url: 'https://firebase.google.com' },
   { name: 'Git',         icon: IconGit,        url: 'https://git-scm.com' }
 ];
 

@@ -95,7 +95,6 @@ h2 {
   justify-content: flex-end;
   text-align: center;
   flex-direction: column;
-  background: var(--color-background-soft);
   border-radius: 8px;
   padding: 1rem;
 }
@@ -107,7 +106,6 @@ h2 {
   margin: 1rem 0;
   color: hsla(160, 100%, 37%, 1);
   padding: 1rem;
-  background: var(--color-background-soft);
   overflow: auto;
 }
 
