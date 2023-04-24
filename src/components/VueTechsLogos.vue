@@ -175,7 +175,7 @@ import IconEdge from '@/assets/techs/edge.svg?component'
 import IconCpp from '@/assets/techs/cpp.svg?component'
 import IconCsharp from '@/assets/techs/csharp.svg?component'
 import IconFirebase from '@/assets/techs/firebase.svg?component'
-import IconPhp from '@/assets/techs/firebase.svg?component'
+import IconPhp from '@/assets/techs/php.svg?component'
 import IconMysql from '@/assets/techs/mysql.svg?component'
 
 const techs = [
