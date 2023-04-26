@@ -2,12 +2,14 @@
 import pkg from '../../package.json';
 import HelloWorld from './components/HelloWorld.vue'
 import VueTechsLogos from 'vue-techs-logos'
+import DarkModeVue from 'darkmode-vue'
 
 const appVersion: string = pkg.version;
 </script>
 
 <template>
   <header>
+    <DarkModeVue class="darkmode-button" />
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
     <div class="wrapper">
       <HelloWorld :msg="`vue-techs-logos@${appVersion}`" />
@@ -81,6 +83,40 @@ const appVersion: string = pkg.version;
 </template>
 
 <style>
+body.darkmode {
+  --color-background: var(--vt-c-black);
+  --color-background-soft: var(--vt-c-black-soft);
+  --color-background-mute: var(--vt-c-black-mute);
+
+  --color-border: var(--vt-c-divider-dark-2);
+  --color-border-hover: var(--vt-c-divider-dark-1);
+
+  --color-heading: var(--vt-c-text-dark-1);
+  --color-text: var(--vt-c-text-dark-2);
+}
+
+body.lightmode {
+    --vtl-background: rgba(0,0,0, .05);
+    --vtl-background-tooltip: #444;
+    --vtl-shadow-tooltip: rgba(0,0,0,.2);
+    --vtl-text: #fff;
+    --vtl-background-svg: #000;
+}
+
+body.darkmode {
+    --vtl-background: rgba(0,0,0, .5);
+    --vtl-background-tooltip: #fff;
+    --vtl-shadow-tooltip: rgba(0,0,0,.2);
+    --vtl-text: #000;
+    --vtl-background-svg: #fff;
+}
+
+.darkmode-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .5rem 1rem .5rem .5rem !important;
+}
 h2 {
   margin: 4rem 0 1rem;
 }
