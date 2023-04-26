@@ -14,14 +14,14 @@ Usage basic
 ```vue
 import VueTechsLogs from 'vue-techs-logos';
 
+// list all logos
+<VueTechsLogos />
+
 // single icon
 <VueTechsLogos name="javascript" />
 
 // list limited logos
 <VueTechsLogos :list="['vue','javascript', 'react', 'angular']" />
-
-// list all logos
-<VueTechsLogos />
 
 // list all logos with hiddenLogos
 <VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />
