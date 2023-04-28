@@ -9,7 +9,7 @@ const appVersion: string = pkg.version;
 
 <template>
   <header>
-    <DarkModeVue class="darkmode-button" />
+    <DarkModeVue class="darkmode-button" :hiddenLabel="true"/>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
     <div class="wrapper">
       <HelloWorld :msg="`vue-techs-logos@${appVersion}`" />
@@ -115,7 +115,6 @@ body.darkmode {
   position: absolute;
   top: 0;
   right: 0;
-  padding: .5rem 1rem .5rem .5rem !important;
 }
 h2 {
   margin: 4rem 0 1rem;
