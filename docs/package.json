@@ -14,7 +14,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "darkmode-vue": "^0.1.4",
+    "darkmode-vue": "^0.2.5",
     "sass": "^1.62.0",
     "vue": "^3.2.47",
     "vue-techs-logos": "^0.0.13"
