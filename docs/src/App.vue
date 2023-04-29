@@ -83,6 +83,13 @@ const appVersion: string = pkg.version;
 </template>
 
 <style>
+body {
+  --vtl-background: rgba(0,0,0, .05);
+  --vtl-background-tooltip: #444;
+  --vtl-shadow-tooltip: rgba(0,0,0,.2);
+  --vtl-text: #fff;
+  --vtl-background-svg: #000;
+}
 body.darkmode {
   --color-background: var(--vt-c-black);
   --color-background-soft: var(--vt-c-black-soft);
@@ -93,24 +100,13 @@ body.darkmode {
 
   --color-heading: var(--vt-c-text-dark-1);
   --color-text: var(--vt-c-text-dark-2);
-}
 
-body.lightmode {
-    --vtl-background: rgba(0,0,0, .05);
-    --vtl-background-tooltip: #444;
-    --vtl-shadow-tooltip: rgba(0,0,0,.2);
-    --vtl-text: #fff;
-    --vtl-background-svg: #000;
+  --vtl-background: rgba(0,0,0, .5);
+  --vtl-background-tooltip: #fff;
+  --vtl-shadow-tooltip: rgba(0,0,0,.2);
+  --vtl-text: #000;
+  --vtl-background-svg: #fff;
 }
-
-body.darkmode {
-    --vtl-background: rgba(0,0,0, .5);
-    --vtl-background-tooltip: #fff;
-    --vtl-shadow-tooltip: rgba(0,0,0,.2);
-    --vtl-text: #000;
-    --vtl-background-svg: #fff;
-}
-
 .darkmode-button {
   position: absolute;
   top: 0;

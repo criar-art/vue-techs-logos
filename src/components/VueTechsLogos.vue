@@ -104,6 +104,22 @@
   }
 }
 
+body {
+  --vtl-background: rgba(0,0,0, .05);
+  --vtl-background-tooltip: #444;
+  --vtl-shadow-tooltip: rgba(0,0,0,.2);
+  --vtl-text: #fff;
+  --vtl-background-svg: #000;
+}
+
+body.darkmode {
+  --vtl-background: rgba(0,0,0, .5);
+  --vtl-background-tooltip: #fff;
+  --vtl-shadow-tooltip: rgba(0,0,0,.2);
+  --vtl-text: #000;
+  --vtl-background-svg: #fff;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     --vtl-background: rgba(0,0,0, .05);
