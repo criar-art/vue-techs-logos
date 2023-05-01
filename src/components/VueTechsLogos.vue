@@ -49,7 +49,6 @@
             <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
         </figure>
         </template>
-
     </section>
     </template>
   </template>
