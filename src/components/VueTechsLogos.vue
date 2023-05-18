@@ -211,7 +211,7 @@ const techs = [
   { name: 'Swift',       icon: IconSwift,      url: 'https://developer.apple.com/swift' },
   { name: 'PHP',         icon: IconPhp,        url: 'https://www.php.net' },
   { name: 'C#',          icon: IconCsharp,     url: 'https://learn.microsoft.com/en-us/dotnet/csharp' },
-  { name: 'C++',         icon: IconCpp,  url: 'https://learn.microsoft.com/en-us/dotnet/csharp' },
+  { name: 'C++',         icon: IconCpp,        url: 'https://learn.microsoft.com/en-us/dotnet/csharp' },
   { name: 'VisualCode',  icon: IconVisualCode, url: 'https://code.visualstudio.com' },
   { name: 'Github',      icon: IconGithub,     url: 'https://github.com/criar-art' },
   { name: 'NPM',         icon: IconNpm,        url: 'npmjs.com/package/vue-techs-logos' },
