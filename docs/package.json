@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -17,7 +17,7 @@
     "darkmode-vue": "^0.4.0",
     "sass": "^1.69.5",
     "vue": "^3.3.8",
-    "vue-techs-logos": "^0.0.15"
+    "vue-techs-logos": "^0.1.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.5.1",
