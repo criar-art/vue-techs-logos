@@ -123,6 +123,11 @@
   resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.9.6.tgz"
   integrity sha512-HUNqM32dGzfBKuaDUBqFB7tP6VMN74eLZ33Q9Y1TBqRDn+qDonkAUyKWwF9BR9unV7QUzffLnz9GrnKvMqC/fw==
 
+"@rollup/rollup-linux-x64-musl@4.9.6":
+  version "4.9.6"
+  resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.9.6.tgz"
+  integrity sha512-ch7M+9Tr5R4FK40FHQk8VnML0Szi2KRujUgHXd/HjuH9ifH72GUmw6lStZBo3c3GB82vHa0ZoUfjfcM7JiiMrQ==
+
 "@rushstack/eslint-patch@^1.7.2":
   version "1.7.2"
   resolved "https://registry.npmjs.org/@rushstack/eslint-patch/-/eslint-patch-1.7.2.tgz"
@@ -455,13 +460,13 @@
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.4.15.tgz"
   integrity sha512-KzfPTxVaWfB+eGcGdbSf4CWdaXcGDqckoeXUh7SB3fZdEtzPCK2Vq9B/lRRL3yutax/LWITz+SwvgyOxz5V75g==
 
-"@vue/test-utils@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.npmjs.org/@vue/test-utils/-/test-utils-2.4.1.tgz"
-  integrity sha512-VO8nragneNzUZUah6kOjiFmD/gwRjUauG9DROh6oaOeFwX1cZRUNHhdeogE8635cISigXFTtGLUQWx5KCb0xeg==
+"@vue/test-utils@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.npmjs.org/@vue/test-utils/-/test-utils-2.4.4.tgz"
+  integrity sha512-8jkRxz8pNhClAf4Co4ZrpAoFISdvT3nuSkUlY6Ys6rmTpw3DMWG/X3mw3gQ7QJzgCZO9f+zuE2kW57fi09MW7Q==
   dependencies:
-    js-beautify "1.14.9"
-    vue-component-type-helpers "1.8.4"
+    js-beautify "^1.14.9"
+    vue-component-type-helpers "^1.8.21"
 
 "@vue/tsconfig@^0.5.1":
   version "0.5.1"
@@ -1775,7 +1780,7 @@ joi@^17.11.0:
     "@sideway/formula" "^3.0.1"
     "@sideway/pinpoint" "^2.0.0"
 
-js-beautify@1.14.9:
+js-beautify@^1.14.9:
   version "1.14.9"
   resolved "https://registry.npmjs.org/js-beautify/-/js-beautify-1.14.9.tgz"
   integrity sha512-coM7xq1syLcMyuVGyToxcj2AlzhkDjmfklL8r0JgJ7A76wyGMpJ1oA35mr4APdYNO/o/4YY8H54NQIJzhMbhBg==
@@ -2943,10 +2948,10 @@ vitest@^1.2.2:
     vite-node "1.2.2"
     why-is-node-running "^2.2.2"
 
-vue-component-type-helpers@1.8.4:
-  version "1.8.4"
-  resolved "https://registry.npmjs.org/vue-component-type-helpers/-/vue-component-type-helpers-1.8.4.tgz"
-  integrity sha512-6bnLkn8O0JJyiFSIF0EfCogzeqNXpnjJ0vW/SZzNHfe6sPx30lTtTXlE5TFs2qhJlAtDFybStVNpL73cPe3OMQ==
+vue-component-type-helpers@^1.8.21:
+  version "1.8.27"
+  resolved "https://registry.npmjs.org/vue-component-type-helpers/-/vue-component-type-helpers-1.8.27.tgz"
+  integrity sha512-0vOfAtI67UjeO1G6UiX5Kd76CqaQ67wrRZiOe7UAb9Jm6GzlUr/fC7CV90XfwapJRjpCMaZFhv1V0ajWRmE9Dg==
 
 vue-eslint-parser@^9.3.1, vue-eslint-parser@^9.4.2:
   version "9.4.2"
