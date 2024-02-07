@@ -18,7 +18,7 @@
     "sass": "^1.70.0",
     "typescritp": "^1.0.0",
     "vue": "^3.4.15",
-    "vue-techs-logos": "^0.1.5"
+    "vue-techs-logos": "^0.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.7.2",
