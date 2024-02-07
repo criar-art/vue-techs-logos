@@ -138,6 +138,8 @@ h2 {
   color: hsla(160, 100%, 37%, 1);
   padding: 1rem;
   overflow: auto;
+  transition: .3s all;
+  border-radius: 10px;
 }
 
 .code-wrapper:hover {
@@ -152,7 +154,6 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
-  font-size: ;
 }
 
 .code-content {
