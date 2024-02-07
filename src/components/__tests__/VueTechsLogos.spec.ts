@@ -10,7 +10,7 @@ describe('VueTechsLogos', () => {
     expect(wrapper.text()).toContain('Vue')
     expect(wrapper.text()).toContain('Test Vue')
   })
-  it('renders properly', () => {
+  it('renders components with loop and check name', () => {
     const wrapper = mount(VueTechsLogos)
 
     for(let item of techs) {
