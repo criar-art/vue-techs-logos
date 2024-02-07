@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import pkg from '../../package.json';
-import HelloWorld from './components/HelloWorld.vue'
+import Title from './components/Title.vue'
 import VueTechsLogos from 'vue-techs-logos'
 import DarkModeVue from 'darkmode-vue'
 
@@ -12,7 +12,7 @@ const appVersion: string = pkg.version;
     <DarkModeVue class="darkmode-button" :hiddenLabel="true"/>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
     <div class="wrapper">
-      <HelloWorld :msg="`vue-techs-logos@${appVersion}`" />
+      <Title :title="`vue-techs-logos@${appVersion}`" />
       <div class="code-content">
         <div>
           <h1>Install</h1>
