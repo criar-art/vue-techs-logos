@@ -244,17 +244,20 @@ const hiddenTechs = (items) => techs.filter(item => !items.includes(item.name.to
       margin-bottom: .2rem;
     }
 
-    figcaption.tooltip {
-      position: absolute;
-      bottom: 2%;
-      background: var(--vtl-background-tooltip);
-      box-shadow: 0 4px 10px var(--vtl-shadow-tooltip);
-      padding: 0.2rem 0.5rem;
-      border-radius: 5px;
-      pointer-events: none;
-      opacity: 0;
-      transition: .3s all;
-      color: var(--vtl-text);
+    figcaption {
+      font-size: .7rem;
+      &.tooltip {
+        position: absolute;
+        bottom: 2%;
+        background: var(--vtl-background-tooltip);
+        box-shadow: 0 4px 10px var(--vtl-shadow-tooltip);
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+        pointer-events: none;
+        opacity: 0;
+        transition: .3s all;
+        color: var(--vtl-text);
+      }
     }
   }
 }
