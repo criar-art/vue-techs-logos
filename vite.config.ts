@@ -11,7 +11,8 @@ export default defineConfig({
     VitePluginStyleInject(),
     vue(),
     svgLoader({
-      svgo: false
+      svgo: false,
+      defaultImport: 'component'
     })
   ],
   build: {
