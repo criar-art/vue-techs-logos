@@ -161,7 +161,7 @@ const getTechs = (items) => techs.filter((tech => items.find(item => {
 
 const hiddenTechs = (items) => techs.filter(item => !items.includes(item.name.toLocaleLowerCase()))
 
-const listTechs = props.list ? getTechs(list) : props.hiddenLogos ? hiddenTechs(hiddenLogos) : techs
+const listTechs = props.list ? getTechs(props.list) : props.hiddenLogos ? hiddenTechs(props.hiddenLogos) : techs
 </script>
 
 <template>
