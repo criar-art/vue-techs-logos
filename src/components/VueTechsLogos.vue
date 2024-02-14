@@ -160,6 +160,8 @@ const getTechs = (items) => techs.filter((tech => items.find(item => {
 })))
 
 const hiddenTechs = (items) => techs.filter(item => !items.includes(item.name.toLocaleLowerCase()))
+
+const listTechs = props.list ? getTechs(list) : props.hiddenLogos ? hiddenTechs(hiddenLogos) : techs
 </script>
 
 <template>
@@ -173,34 +175,13 @@ const hiddenTechs = (items) => techs.filter(item => !items.includes(item.name.to
     </figure>
   </template>
   <template v-else>
-    <template v-if="list">
-      <section class="techs" :class="[props.class]">
-        <figure class="tech-container" :class="[tech.name.toLocaleLowerCase()]"
-          :style="{ width: props.size ? props.size : '100px' }" v-for="tech of getTechs(list)" :key="tech.name">
-          <component :is="tech.icon" />
-          <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
-        </figure>
-      </section>
-    </template>
-    <template v-else>
-      <section class="techs" :class="[props.class]">
-        <template v-if="hiddenLogos">
-          <figure class="tech-container" :class="[tech.name.toLocaleLowerCase()]"
-            :style="{ width: props.size ? props.size : '100px' }" v-for="tech of hiddenTechs(hiddenLogos)"
-            :key="tech.name">
-            <component :is="tech.icon" />
-            <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
-          </figure>
-        </template>
-        <template v-else>
-          <figure class="tech-container" :class="[tech.name.toLocaleLowerCase()]"
-            :style="{ width: props.size ? props.size : '100px' }" v-for="tech of techs" :key="tech.name">
-            <component :is="tech.icon" />
-            <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
-          </figure>
-        </template>
-      </section>
-    </template>
+    <section class="techs" :class="[props.class]">
+      <figure class="tech-container" :class="[tech.name.toLocaleLowerCase()]"
+        :style="{ width: props.size ? props.size : '100px' }" v-for="tech of listTechs" :key="tech.name">
+        <component :is="tech.icon" />
+        <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
+      </figure>
+    </section>
   </template>
 </template>
 
