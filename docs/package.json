@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -18,7 +18,7 @@
     "sass": "^1.70.0",
     "typescritp": "^1.0.0",
     "vue": "^3.4.19",
-    "vue-techs-logos": "^0.1.6"
+    "vue-techs-logos": "^0.1.7"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.7.2",
