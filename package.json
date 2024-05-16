@@ -31,20 +31,20 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "sass": "^1.76.0",
-    "vue": "^3.4.26"
+    "sass": "^1.77.1",
+    "vue": "^3.4.27"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.2",
     "@types/jsdom": "^21.1.6",
-    "@types/node": "^20.12.8",
+    "@types/node": "^20.12.12",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-typescript": "^13.0.0",
-    "@vue/test-utils": "^2.4.5",
+    "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^9.2.0",
     "eslint-plugin-cypress": "^3.1.1",
-    "eslint-plugin-vue": "^9.25.0",
+    "eslint-plugin-vue": "^9.26.0",
     "jsdom": "^24.0.0",
     "npm-run-all": "^4.1.5",
     "start-server-and-test": "^2.0.3",
@@ -53,6 +53,6 @@
     "vite-plugin-style-inject": "^0.0.1",
     "vite-svg-loader": "^4.0.0",
     "vitest": "^1.6.0",
-    "vue-tsc": "^2.0.16"
+    "vue-tsc": "^2.0.19"
   }
 }
