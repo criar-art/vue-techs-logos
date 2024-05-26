@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: cd docs && npm ci && npm run build
+      - run: cd docs && npm ci --legacy-peer-deps  && npm run build
       - name: Test unit component
         run: npm ci --legacy-peer-deps && npm run test:unit
       - name: Test unit docs
