@@ -54,6 +54,6 @@
     "vite-plugin-style-inject": "^0.0.1",
     "vite-svg-loader": "^5.1.0",
     "vitest": "^1.6.0",
-    "vue-tsc": "^2.0.19"
+    "vue-tsc": "^2.0.20"
   }
 }
