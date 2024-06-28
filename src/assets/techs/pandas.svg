@@ -2,6 +2,8 @@
   viewBox="0 50 218.63 231.21">
   <defs>
     <style>
+      .cls-1{fill:#130654;}
+      .darkmode .cls-1{fill:#fff;}
       @media (prefers-color-scheme: dark) {
         .cls-1{fill:#fff;}
       }
