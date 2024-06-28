@@ -95,17 +95,28 @@ const listTechs = props.list ? getTechs(props.list) : props.hiddenLogos ? hidden
   }
 }
 
+body {
+  --vtl-background: rgba(0,0,0, .05);
+  --vtl-background-tooltip: #444;
+  --vtl-shadow-tooltip: rgba(0,0,0,.2);
+  --vtl-text: #000;
+  --vtl-background-svg: #000;
+  --vtl-background-svg-invert: #fff;
+  --vtl-background-gradient: linear-gradient(228deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
+}
+
+body.darkmode {
+  --vtl-background: rgba(0,0,0, .5);
+  --vtl-background-tooltip: #444;
+  --vtl-shadow-tooltip: rgba(0,0,0,.2);
+  --vtl-text: #fff;
+  --vtl-background-svg: #fff;
+  --vtl-background-svg-invert: #000;
+  --vtl-background-gradient: linear-gradient(228deg, rgb(24, 24, 24) 0%, rgb(38, 38, 38) 60%);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    --vtl-background: rgba(0,0,0, .05);
-    --vtl-background-tooltip: #444;
-    --vtl-shadow-tooltip: rgba(0,0,0,.2);
-    --vtl-text: #000;
-    --vtl-background-svg: #000;
-    --vtl-background-svg-invert: #fff;
-    --vtl-background-gradient: linear-gradient(228deg, rgba(238,238,238,1) 0%, rgba(255,255,255,1) 60%);
-  }
-  body {
     --vtl-background: rgba(0,0,0, .05);
     --vtl-background-tooltip: #444;
     --vtl-shadow-tooltip: rgba(0,0,0,.2);
@@ -118,15 +129,6 @@ const listTechs = props.list ? getTechs(props.list) : props.hiddenLogos ? hidden
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --vtl-background: rgba(0,0,0, .5);
-    --vtl-background-tooltip: #444;
-    --vtl-shadow-tooltip: rgba(0,0,0,.2);
-    --vtl-text: #fff;
-    --vtl-background-svg: #fff;
-    --vtl-background-svg-invert: #000;
-    --vtl-background-gradient: linear-gradient(228deg, rgb(24, 24, 24) 0%, rgb(38, 38, 38) 60%);
-  }
-  body.darkmode {
     --vtl-background: rgba(0,0,0, .5);
     --vtl-background-tooltip: #444;
     --vtl-shadow-tooltip: rgba(0,0,0,.2);
