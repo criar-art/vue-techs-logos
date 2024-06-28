@@ -71,6 +71,22 @@ import IconDribbble from '@/assets/techs/dribbble.svg'
 import IconDocker from '@/assets/techs/docker.svg'
 import IconDiscord from '@/assets/techs/discord.svg'
 import IconDigitalOcean from '@/assets/techs/digitalocean.svg'
+import IconExpo from '@/assets/techs/expo.svg'
+import IconNextJS from '@/assets/techs/nextjs.svg'
+import IconNuxt from '@/assets/techs/nuxt.svg'
+import IconQwik from '@/assets/techs/qwik.svg'
+import IconSpringBoot from '@/assets/techs/springboot.svg'
+import IconVercel from '@/assets/techs/vercel.svg'
+import IconAstro from '@/assets/techs/astro.svg'
+import IconTurbo from '@/assets/techs/turbo.svg'
+import IconPandas from '@/assets/techs/pandas.svg'
+import IconAWS from '@/assets/techs/aws.svg'
+import IconNvidia from '@/assets/techs/nvidia.svg'
+import IconTensorFlow from '@/assets/techs/tensorflow.svg'
+import IconGemini from '@/assets/techs/gemini.svg'
+import IconShopify from '@/assets/techs/shopify.svg'
+import IconSteam from '@/assets/techs/steam.svg'
+
 
 const techs = [
   { name: 'Android',        icon: IconAndroid,        url: 'https://www.android.com' },
@@ -145,7 +161,22 @@ const techs = [
   { name: 'Dribbble',       icon: IconDribbble,       url: 'https://dribbble.com' },
   { name: 'Docker',         icon: IconDocker,         url: 'https://docker.com' },
   { name: 'Discord',        icon: IconDiscord,        url: 'https://discord.com' },
-  { name: 'DigitalOcean',   icon: IconDigitalOcean,   url: 'https://digitalocean.com' }
+  { name: 'DigitalOcean',   icon: IconDigitalOcean,   url: 'https://digitalocean.com' },
+  { name: 'Expo',           icon: IconExpo,           url: 'https://expo.dev' },
+  { name: 'Next.js',        icon: IconNextJS,         url: 'https://nextjs.org' },
+  { name: 'Nuxt',           icon: IconNuxt,           url: 'https://nuxt.com' },
+  { name: 'Qwik',           icon: IconQwik,           url: 'https://qwik.dev' },
+  { name: 'Astro',          icon: IconAstro,          url: 'https://astro.build' },
+  { name: 'Turbo',          icon: IconTurbo,          url: 'https://turbo.build' },
+  { name: 'SpringBoot',     icon: IconSpringBoot,     url: 'https://spring.io' },
+  { name: 'Vercel',         icon: IconVercel,         url: 'https://vercel.com' },
+  { name: 'Pandas',         icon: IconPandas,         url: 'https://pandas.pydata.org' },
+  { name: 'AWS',            icon: IconAWS,            url: 'https://aws.amazon.com' },
+  { name: 'Nvidia',         icon: IconNvidia,         url: 'https://www.nvidia.com' },
+  { name: 'TensorFlow',     icon: IconTensorFlow,     url: 'https://www.tensorflow.org' },
+  { name: 'Gemini',         icon: IconGemini,         url: 'https://gemini.google.com' },
+  { name: 'Shopify',        icon: IconShopify,        url: 'https://www.shopify.com' },
+  { name: 'Steam',          icon: IconSteam,          url: 'https://www.steam.com' }
 ];
 
 export default techs
