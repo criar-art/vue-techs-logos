@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import pkg from '../package.json';
 // import VueTechsLogos from 'vue-techs-logos'
 import VueTechsLogos from './components/VueTechsLogos.vue'
@@ -23,6 +23,14 @@ function openModal() {
 function closeModal() {
   modalInstall.value = false;
 }
+
+watch(modalInstall, (newValue) => {
+  if (newValue) {
+    document.body.classList.add("modal-active");
+  } else {
+    document.body.classList.remove("modal-active");
+  }
+});
 </script>
 
 <template>
