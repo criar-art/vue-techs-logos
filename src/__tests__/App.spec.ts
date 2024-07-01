@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
 import App from '@/App.vue'
-import { techs } from '../../../src/components/__tests__/mock'
+import { techs } from '../../src/components/__tests__/mock'
 
 describe('App', () => {
   it('renders basic app exists', () => {
