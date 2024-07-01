@@ -18,5 +18,8 @@ const vueVersion = pkg.dependencies.vue.replace('^', '');
   @media (max-width: 640px) {
     font-size: 1em;
   }
+  b {
+    font-weight: bold;
+  }
 }
 </style>
