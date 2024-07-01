@@ -4,6 +4,7 @@ import pkg from '../package.json';
 // import VueTechsLogos from 'vue-techs-logos'
 import VueTechsLogos from './components/VueTechsLogos.vue'
 import ModalInstall from './components/ModalInstall.vue'
+import Footer from './components/Footer.vue'
 import DarkModeVue from 'darkmode-vue'
 import techs from './techs'
 
@@ -36,7 +37,7 @@ watch(modalInstall, (newValue) => {
 <template>
   <header>
     <DarkModeVue class="darkmode-button" :hiddenLabel="true" />
-    <a class="logo" href="https://github.com/criar-art/vue-techs-logos" target="_blank">
+    <a class="logo" href="https://www.npmjs.com/package/vue-techs-logos" target="_blank">
       <img alt="Vue logo" class="logo" src="./assets/logo.svg?url" width="80" height="80" />
       <h1>{{ `vue-techs-logos@${appVersion}` }}</h1>
     </a href="">
@@ -66,6 +67,7 @@ watch(modalInstall, (newValue) => {
     <input type="text" class="input-search" v-model="search" placeholder="Search logos..." />
     <VueTechsLogos :list="filteredArray" />
   </main>
+  <Footer />
 </template>
 
 <style lang="scss">
@@ -138,6 +140,7 @@ header {
 .logo {
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
   h1 {
     font-weight: bold;
     font-size: 1.5rem;
