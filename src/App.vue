@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import pkg from '../package.json';
-// import Title from './components/Title.vue'
 // import VueTechsLogos from 'vue-techs-logos'
 import VueTechsLogos from './components/VueTechsLogos.vue'
 import DarkModeVue from 'darkmode-vue'
