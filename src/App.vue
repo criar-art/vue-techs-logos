@@ -97,6 +97,7 @@ body.darkmode {
 
 h2 {
   margin: 0 0 1rem;
+  font-weight: bold;
 }
 
 .content {
@@ -122,6 +123,7 @@ h2 {
 
 header {
   width: 100%;
+  padding: 1rem;
 }
 
 .logo {
@@ -170,7 +172,7 @@ header {
   background: var(--vtl-background);
   border: 2px solid var(--vtl-background);
   color: var(--color-text);
-  width: calc(100% - 1rem);
+  width: 100%;
 }
 
 .install {
