@@ -1,10 +1,18 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue';
 import pkg from '../package.json';
 // import VueTechsLogos from 'vue-techs-logos'
 import VueTechsLogos from './components/VueTechsLogos.vue'
 import DarkModeVue from 'darkmode-vue'
+import techs from './techs'
 
 const appVersion: string = pkg.version;
+const search = ref('');
+const filteredArray = computed(() =>
+  techs
+    .filter((item) => item.name.toLowerCase().includes(search.value.trim().toLowerCase()))
+    .map((item) => item.name)
+);
 </script>
 
 <template>
@@ -17,55 +25,36 @@ const appVersion: string = pkg.version;
   </header>
 
   <main>
-    <h1>Install</h1>
-    <code class="code-wrapper">
-      {{ `npm run install vue-techs-logos` }}
-    </code>
-    <h2>Usage</h2>
-    <code class="code-wrapper">
-      {{ `import VueTechsLogos from 'vue-techs-logos'
+    <div>
+      <h1>Install</h1>
+      <code class="code-wrapper">
+        {{ `npm run install vue-techs-logos` }}
+      </code>
+      <h2>Usage</h2>
+      <code class="code-wrapper">
+        {{ `import VueTechsLogos from 'vue-techs-logos'
 
 <VueTechsLogos name="vue" />` }}
-    </code>
-    <h2>Use list of components</h2>
+      </code>
+      <h2>Hidden label</h2>
+      <code class="code-wrapper">
+        {{ `<VueTechsLogos name="vue" :hiddenLabel="true" />` }}
+      </code>
+      <h2>List of technologies limited</h2>
+      <code class="code-wrapper">
+        {{ `<VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />` }}
+      </code>
+      <h2>List of technologies full with hiddenLogos</h2>
+      <code class="code-wrapper">
+        {{ `<VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />` }}
+      </code>
+    </div>
+    <h2>Full list of techs</h2>
     <code class="code-wrapper">
       {{ `<VueTechsLogos />` }}
     </code>
-    <h2>Single tech</h2>
-    <code class="code-wrapper">
-{{ `<VueTechsLogos name="vue" />
-<VueTechsLogos name="react" />
-<VueTechsLogos name="angular" />
-<VueTechsLogos name="ember" />
-<VueTechsLogos name="svelte" />`}}
-    </code>
-    <section class="single-section">
-      <VueTechsLogos name="vue" />
-      <VueTechsLogos name="react" />
-      <VueTechsLogos name="angular" />
-      <VueTechsLogos name="ember" />
-      <VueTechsLogos name="svelte" />
-    </section>
-    <h2>List of technologies limited</h2>
-    <code class="code-wrapper">
-      {{ `<VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />` }}
-    </code>
-    <VueTechsLogos :list="['vue', 'JavaScript', 'react', 'angular']" />
-    <h2>List of technologies full</h2>
-    <code class="code-wrapper">
-      {{ `<VueTechsLogos />` }}
-    </code>
-    <VueTechsLogos />
-    <h2>List of technologies full with hiddenLogos</h2>
-    <code class="code-wrapper">
-      {{ `<VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />` }}
-    </code>
-    <VueTechsLogos :hiddenLogos="['vue', 'javascript', 'react', 'angular', 'android']" />
-    <h2>List of technologies full hidden labels</h2>
-    <code class="code-wrapper">
-      {{ `<VueTechsLogos :hiddenLabel="true" />` }}
-    </code>
-    <VueTechsLogos :hiddenLabel="true" />
+    <input type="text" class="input-search" v-model="search" placeholder="Search logos..." />
+    <VueTechsLogos :list="filteredArray" />
   </main>
 </template>
 
@@ -106,34 +95,14 @@ h2 {
   margin: 1rem 0 1rem;
 }
 
-.single-section {
-  display: flex;
-  gap: 20px;
-}
-
-.single-section figure {
-  display: flex;
-  height: 100px;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: center;
-  flex-direction: column;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
 .code-wrapper {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex: 1;
-  white-space: pre;
-  margin: .5rem 0;
-  color: hsla(160, 100%, 37%, 1);
-  padding: 1rem;
-  overflow: auto;
-  transition: .3s all;
-  border-radius: 10px;
+  color: var(--color-text);
   background: var(--vtl-background);
+  padding: 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, .2);
 }
 
 header {
@@ -149,8 +118,13 @@ header {
   background: transparent;
 }
 
-.code-content {
-  display: flex;
-  gap: 20px;
+.input-search {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  background: var(--vtl-background);
+  border: 2px solid var(--vtl-background);
+  color: var(--color-text);
+  width: calc(100% - 2rem);
 }
 </style>

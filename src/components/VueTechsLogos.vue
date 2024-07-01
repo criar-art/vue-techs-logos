@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue';
 import techs from '@/techs'
 
 const props = defineProps(['list', 'name', 'size', 'label', 'hiddenLabel', 'class', 'hiddenLogos'])
@@ -13,7 +14,9 @@ const getTechs = (items) => techs.filter((tech => items.find(item => {
 
 const hiddenTechs = (items) => techs.filter(item => !items.includes(item.name.toLocaleLowerCase()))
 
-const listTechs = props.list ? getTechs(props.list) : props.hiddenLogos ? hiddenTechs(props.hiddenLogos) : techs
+const listTechs = computed(() => {
+  return props.list ? getTechs(props.list) : props.hiddenLogos ? hiddenTechs(props.hiddenLogos) : techs;
+});
 </script>
 
 <template>
