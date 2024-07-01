@@ -96,11 +96,12 @@ body.darkmode {
 }
 
 .darkmode-button {
-  margin: 1rem;
+  margin: 2rem 1rem;
   position: fixed;
   top: 0;
   right: 0;
   padding: .6rem !important;
+  background: var(--primary) !important;
 }
 
 h2 {
