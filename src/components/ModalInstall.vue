@@ -73,6 +73,18 @@ const props = defineProps(['active', 'closeModal'])
   code:last-of-type {
     margin-bottom: 0;
   }
+
+  .code-wrapper {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.darkmode {
+  .modal-content .code-wrapper {
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 .modal-button {
