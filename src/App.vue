@@ -99,6 +99,7 @@ body.darkmode {
   right: 0;
   padding: .6rem !important;
   background: var(--primary) !important;
+  z-index: 12;
 }
 
 h2 {
