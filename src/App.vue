@@ -95,34 +95,14 @@ h2 {
   margin: 1rem 0 1rem;
 }
 
-.single-section {
-  display: flex;
-  gap: 20px;
-}
-
-.single-section figure {
-  display: flex;
-  height: 100px;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: center;
-  flex-direction: column;
-  border-radius: 8px;
-  padding: 1rem;
-}
-
 .code-wrapper {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex: 1;
-  white-space: pre;
-  margin: .5rem 0;
   color: var(--color-text);
-  padding: 1rem;
-  overflow: auto;
-  transition: .3s all;
-  border-radius: 10px;
   background: var(--vtl-background);
+  padding: 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, .2);
 }
 
 header {
@@ -136,11 +116,6 @@ header {
 
 .logo:hover {
   background: transparent;
-}
-
-.code-content {
-  display: flex;
-  gap: 20px;
 }
 
 .input-search {
