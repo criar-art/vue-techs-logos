@@ -24,16 +24,22 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
+    "build:module": "run-p type-check build-only:module",
     "preview": "vite preview",
     "test:unit": "vitest",
+    "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
     "build-only": "vite build",
+    "build-only:module": "vite build --config vite-module.config.js",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "jsom": "^1.0.0",
     "sass": "^1.77.6",
-    "vue": "^3.4.31"
+    "vue": "^3.4.31",
+    "darkmode-vue": "^0.4.0",
+    "vue-techs-logos": "^0.1.15"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
@@ -54,6 +60,7 @@
     "vite-plugin-style-inject": "^0.0.1",
     "vite-svg-loader": "^5.1.0",
     "vitest": "^1.6.0",
-    "vue-tsc": "^2.0.24"
+    "vue-tsc": "^2.0.24",
+    "cypress": "^13.12.0"
   }
 }

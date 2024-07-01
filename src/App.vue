@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import pkg from '../../package.json';
-import Title from './components/Title.vue'
-import VueTechsLogos from 'vue-techs-logos'
+import pkg from '../package.json';
+// import VueTechsLogos from 'vue-techs-logos'
+import VueTechsLogos from './components/VueTechsLogos.vue'
 import DarkModeVue from 'darkmode-vue'
 
 const appVersion: string = pkg.version;
@@ -12,7 +12,7 @@ const appVersion: string = pkg.version;
     <DarkModeVue class="darkmode-button" :hiddenLabel="true" />
     <a class="logo" href="https://github.com/criar-art/vue-techs-logos" target="_blank">
       <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="80" height="80" />
-      <Title :title="`vue-techs-logos@${appVersion}`" />
+      <h1>{{ `vue-techs-logos@${appVersion}` }}</h1>
     </a href="">
   </header>
 

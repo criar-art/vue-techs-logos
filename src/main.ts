@@ -1,3 +1,6 @@
-import VueTechsLogos from './components/VueTechsLogos.vue'
+import { createApp } from 'vue'
+import App from './App.vue'
 
-export default VueTechsLogos
+import './assets/main.css'
+
+createApp(App).mount('#app')
