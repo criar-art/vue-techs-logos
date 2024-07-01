@@ -11,7 +11,7 @@ const appVersion: string = pkg.version;
   <header>
     <DarkModeVue class="darkmode-button" :hiddenLabel="true" />
     <a class="logo" href="https://github.com/criar-art/vue-techs-logos" target="_blank">
-      <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="80" height="80" />
+      <img alt="Vue logo" class="logo" src="./assets/logo.svg?url" width="80" height="80" />
       <h1>{{ `vue-techs-logos@${appVersion}` }}</h1>
     </a href="">
   </header>
