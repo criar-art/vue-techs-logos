@@ -46,54 +46,59 @@ const listTechs = computed(() => {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-
   .title {
     width: 100%;
     text-align: center;
     margin-top: 2rem;
   }
+}
 
-  figure,
-  figure.tech-container {
+figure.tech-container {
+  background: transparent;
+  border: 1px solid var(--vtl-background);
+  border-radius: 100px;
+  width: 120px !important;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: .3s all;
+  &:hover {
     background: var(--vtl-background);
-    border-radius: 100px;
-    width: 120px !important;
-    height: 120px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    border-color: var(--vtl-background);
+    transform: scale(1.1);
+  }
+  svg {
+    height: 50px;
+    margin-bottom: .2rem;
+  }
+}
 
-    &:hover {
-      transform: scale(1.1);
-
-      figcaption.tooltip {
-        opacity: 1;
-        pointer-events: all;
-      }
+figure {
+  position: relative;
+  text-align: center;
+  margin: .2rem;
+  figcaption {
+    font-size: .7rem;
+    &.tooltip {
+      position: absolute;
+      bottom: 2%;
+      background: var(--vtl-background-tooltip);
+      box-shadow: 0 4px 10px var(--vtl-shadow-tooltip);
+      padding: 0.2rem 0.5rem;
+      border-radius: 5px;
+      pointer-events: none;
+      opacity: 0;
+      transition: .3s all;
+      color: #fff;
     }
-
-    svg {
-      height: 50px;
-      margin-bottom: .2rem;
-    }
-
-    figcaption {
-      font-size: .7rem;
-      &.tooltip {
-        position: absolute;
-        bottom: 2%;
-        background: var(--vtl-background-tooltip);
-        box-shadow: 0 4px 10px var(--vtl-shadow-tooltip);
-        padding: 0.2rem 0.5rem;
-        border-radius: 5px;
-        pointer-events: none;
-        opacity: 0;
-        transition: .3s all;
-        color: #fff;
-      }
+  }
+  &:hover {
+    figcaption.tooltip {
+      opacity: 1;
+      pointer-events: all;
     }
   }
 }
