@@ -22,7 +22,7 @@ import AppVersion from './AppVersion.vue';
   margin-top: auto;
   a {
     align-items: center;
-    color: #000;
+    color: var(--color-text);
     display: flex;
     font-size: 1.5em;
     justify-content: center;
@@ -34,6 +34,9 @@ import AppVersion from './AppVersion.vue';
       font-size: 1em;
     }
   }
-  svg { margin: .5em; }
+  svg {
+    margin: .5em;
+    fill: var(--vtl-background-svg);
+  }
 }
 </style>
