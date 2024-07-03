@@ -39,7 +39,7 @@
     "jsom": "^1.0.0",
     "sass": "^1.77.6",
     "vue": "^3.4.31",
-    "vue-techs-logos": "^0.1.16"
+    "vue-techs-logos": "^0.1.17"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
