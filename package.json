@@ -14,6 +14,14 @@
   "bugs": {
     "url": "https://github.com/criar-art/vue-techs-logos/issues"
   },
+  "keywords": [
+    "vue",
+    "components",
+    "svg",
+    "techs",
+    "logos",
+    "ui"
+  ],
   "exports": {
     ".": {
       "import": "./dist/vue-techs-logos.js",
@@ -32,7 +40,8 @@
     "build-only": "vite build",
     "build-only:module": "vite build --config vite-module.config.js",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "prod": "npm version patch && npm run build:module && npm publish"
   },
   "dependencies": {
     "darkmode-vue": "^0.4.0",
