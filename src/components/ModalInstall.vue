@@ -1,5 +1,5 @@
 <script setup>
-// import { computed } from 'vue';
+import Code from './Code.vue'
 const props = defineProps(['active', 'closeModal'])
 </script>
 
@@ -13,27 +13,25 @@ const props = defineProps(['active', 'closeModal'])
     </button>
     <div class="modal-content">
       <h2>Install</h2>
-      <code class="code-wrapper">
-          {{ `npm run install vue-techs-logos` }}
-        </code>
+      <Code language="shell">npm run install vue-techs-logos</Code>
       <h2>Usage</h2>
-      <code class="code-wrapper">
-          {{ `import VueTechsLogos from 'vue-techs-logos'
+      <Code language="jsx">
+        {{ `import VueTechsLogos from 'vue-techs-logos'
 
 <VueTechsLogos name="vue" />` }}
-        </code>
-      <h2>Hidden label</h2>
-      <code class="code-wrapper">
-          {{ `<VueTechsLogos name="vue" :hiddenLabel="true" />` }}
-        </code>
-      <h2>List of technologies limited</h2>
-      <code class="code-wrapper">
-          {{ `<VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />` }}
-        </code>
-      <h2>List of technologies full with hiddenLogos</h2>
-      <code class="code-wrapper">
-          {{ `<VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />` }}
-        </code>
+      </Code>
+      <h2>hiddenLabel</h2>
+      <Code language="jsx">
+        {{ `<VueTechsLogos name="vue" :hiddenLabel="true" />` }}
+      </Code>
+      <h2>List</h2>
+      <Code language="jsx">
+        {{ `<VueTechsLogos :list="['vue','JavaScript', 'react', 'angular']" />` }}
+      </Code>
+      <h2>hiddenLogos</h2>
+      <Code language="jsx">
+        {{ `<VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />` }}
+      </Code>
     </div>
   </div>
 </template>
@@ -72,18 +70,6 @@ const props = defineProps(['active', 'closeModal'])
 
   code:last-of-type {
     margin-bottom: 0;
-  }
-
-  .code-wrapper {
-    background-color: #fff;
-    color: #000;
-  }
-}
-
-.darkmode {
-  .modal-content .code-wrapper {
-    background-color: #000;
-    color: #fff;
   }
 }
 
