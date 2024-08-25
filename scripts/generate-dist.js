@@ -24,6 +24,7 @@ const distPackageJson = {
   private: false,
   type: "module",
   keywords: pkg.keywords,
+  homepage: pkg.homepage,
   peerDependencies: {
     vue: '^3.4.38',
   },
