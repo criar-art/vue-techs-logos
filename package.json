@@ -1,14 +1,8 @@
 {
   "name": "vue-techs-logos",
   "version": "0.1.18",
-  "private": false,
+  "private": true,
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/vue-techs-logos.umd.cjs",
-  "module": "./dist/vue-techs-logos.js",
-  "types": "./dist/main.d.ts",
   "author": "lucasferreiralimax (https://github.com/lucasferreiralimax)",
   "repository": "https://github.com/criar-art/vue-techs-logos",
   "bugs": {
@@ -22,17 +16,10 @@
     "logos",
     "ui"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/vue-techs-logos.js",
-      "require": "./dist/vue-techs-logos.umd.js"
-    },
-    "./dist/style.css": "./dist/style.css"
-  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
-    "build:module": "run-p type-check build-only:module",
+    "build:module": "run-p type-check build-only:module && npm run postbuild",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
@@ -41,7 +28,8 @@
     "build-only:module": "vite build --config vite-module.config.js",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "prod": "npm version patch && npm run build:module && npm publish"
+    "postbuild": "node scripts/generate-dist.js",
+    "publish": "cd dist && npm pub && cd .."
   },
   "dependencies": {
     "darkmode-vue": "^0.4.0",
@@ -64,6 +52,7 @@
     "eslint-plugin-cypress": "^3.5.0",
     "eslint-plugin-vue": "^9.27.0",
     "jsdom": "^24.1.1",
+    "jsonminify": "^0.4.2",
     "npm-run-all": "^4.1.5",
     "start-server-and-test": "^2.0.5",
     "typescript": "^5.5.4",
