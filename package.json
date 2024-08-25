@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
-    "build:module": "run-p type-check build-only:module && npm run postbuild",
+    "build:module": "run-p type-check build-only:module && npm run minify && npm run postbuild",
     "preview": "vite preview",
     "test:unit": "vitest",
     "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
@@ -28,6 +28,7 @@
     "build-only:module": "vite build --config vite-module.config.js",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "minify": "esbuild dist/**/*.js --minify --outdir=dist --allow-overwrite ",
     "postbuild": "node scripts/generate-dist.js",
     "publish": "cd dist && npm pub && cd .."
   },
