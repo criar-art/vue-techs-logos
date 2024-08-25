@@ -28,17 +28,17 @@ const distPackageJson = {
     vue: '^3.4.38',
   },
   files: [
-    'vue-techs-logo.umd.cjs',
-    'vue-techs-logo.js',
-    'vue-techs-logo.d.ts'
+    'vue-techs-logos.umd.cjs',
+    'vue-techs-logos.js',
+    'vue-techs-logos.d.ts'
   ],
-  main: "./vue-techs-logo.umd.cjs",
-  module: "./vue-techs-logo.js",
-  types: './vue-techs-logo.d.ts',
+  main: "./vue-techs-logos.umd.cjs",
+  module: "./vue-techs-logos.js",
+  types: './vue-techs-logos.d.ts',
   exports: {
     ".": {
-      "import": "./vue-techs-logo.js",
-      "require": "./vue-techs-logo.umd.js"
+      "import": "./vue-techs-logos.js",
+      "require": "./vue-techs-logos.umd.js"
     }
   }
 };
@@ -60,7 +60,7 @@ console.log('README.md copied to dist.');
 
 // Optionally copy declaration file
 fs.copyFileSync(path.resolve(__dirname, '../vue-techs-logos.d.ts'), path.join(outputDir, 'vue-techs-logos.d.ts'));
-console.log('vue-techs-logo.d.ts copied to dist.');
+console.log('vue-techs-logos.d.ts copied to dist.');
 
 // Remove unnecessary files from dist
 const filesToRemove = ['favicon.ico', 'screen-vue-techs-logos.png'];
