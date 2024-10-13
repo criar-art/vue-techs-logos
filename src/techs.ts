@@ -137,6 +137,15 @@ import IconTor from '@/assets/techs/tor.svg?component'
 import IconLua from '@/assets/techs/lua.svg?component'
 import IconFortran from '@/assets/techs/fortran.svg?component'
 import IconCobol from '@/assets/techs/cobol.svg?component'
+import IconAzure from '@/assets/techs/azure.svg?component'
+import IconGrafana from '@/assets/techs/grafana.svg?component'
+import IconAnsible from '@/assets/techs/ansible.svg?component'
+import IconNginx from '@/assets/techs/nginx.svg?component'
+import IconAppStore from '@/assets/techs/appstore.svg?component'
+import IconGraylog from '@/assets/techs/graylog.svg?component'
+import IconCircleCi from '@/assets/techs/circleci.svg?component'
+import IconD3 from '@/assets/techs/d3.svg?component'
+import IconElo from '@/assets/techs/elo.svg?component'
 
 const techs = [
   { name: 'Android',        icon: IconAndroid,        url: 'https://www.android.com' },
@@ -277,7 +286,16 @@ const techs = [
   { name: 'Tor',            icon: IconTor,            url: 'https://www.torproject.org' },
   { name: 'Lua',            icon: IconLua,            url: 'https://www.lua.org' },
   { name: 'Fortran',        icon: IconFortran,        url: 'https://fortran-lang.org' },
-  { name: 'Cobol',          icon: IconCobol,          url: 'https://en.wikipedia.org/wiki/COBOL' }
+  { name: 'Cobol',          icon: IconCobol,          url: 'https://en.wikipedia.org/wiki/COBOL' },
+  { name: 'Azure',          icon: IconAzure,          url: 'https://azure.microsoft.com' },
+  { name: 'Grafana',        icon: IconGrafana,        url: 'https://grafana.com' },
+  { name: 'Ansible',        icon: IconAnsible,        url: 'https://www.ansible.com' },
+  { name: 'Nginx',          icon: IconNginx,          url: 'https://nginx.org' },
+  { name: 'Graylog',        icon: IconGraylog,        url: 'https://graylog.org' },
+  { name: 'AppStore',       icon: IconAppStore,       url: 'https://www.apple.com/br/app-store' },
+  { name: 'CircleCI',       icon: IconCircleCi,       url: 'https://circleci.com' },
+  { name: 'D3',             icon: IconD3,             url: 'https://d3js.org' },
+  { name: 'Elo',            icon: IconElo,            url: 'https://www.elo.com.br' },
 ];
 
 export default techs
