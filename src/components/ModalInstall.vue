@@ -13,7 +13,7 @@ const props = defineProps(['active', 'closeModal'])
     </button>
     <div class="modal-content">
       <h2>Install</h2>
-      <Code language="shell">npm run install vue-techs-logos</Code>
+      <Code language="shell">npm install vue-techs-logos</Code>
       <h2>Usage</h2>
       <Code language="jsx">
         {{ `import VueTechsLogos from 'vue-techs-logos'

@@ -45,7 +45,7 @@ watch(modalInstall, (newValue) => {
     <h2>List of techs</h2>
     <div class="install">
       <code class="code-wrapper">
-        {{ `<VueTechsLogos />` }}
+        {{ `npm install vue-techs-logos` }}
       </code>
       <button class="button-modal" type="button" @click="openModal">
         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40px" height="40px" viewBox="0 0 512 512"
