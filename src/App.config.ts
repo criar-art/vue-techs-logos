@@ -36,5 +36,10 @@ export const configApp = {
       language: 'tsx',
       content: `<VueTechsLogos :hiddenLogos="['vue','javascript', 'react', 'angular', 'android']" />`,
     },
+    {
+      name: 'raw',
+      language: 'tsx',
+      content: `<VueTechsLogos name="vue" :raw="true" />`,
+    },
   ],
 }
