@@ -34,13 +34,10 @@
     "publish": "cd dist && npm pub && cd .."
   },
   "dependencies": {
-    "darkmode-vue": "0.4.1",
-    "highlight.js": "^11.10.0",
     "jsom": "^1.0.0",
     "nucleus-vue": "^0.0.5",
     "sass": "^1.80.4",
-    "vue": "^3.5.12",
-    "vue-techs-logos": "^0.1.24"
+    "vue": "^3.5.12"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.4",
