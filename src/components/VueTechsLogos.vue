@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import techs from '@/techs'
 
-const props = defineProps(['list', 'name', 'size', 'label', 'hiddenLabel', 'class', 'hiddenLogos'])
+const props = defineProps(['list', 'name', 'size', 'label', 'hiddenLabel', 'class', 'hiddenLogos', 'raw'])
 
 const getTech = (name) => {
   return techs.find(item => item.name.toLowerCase() == name.toLowerCase())
@@ -20,23 +20,33 @@ const listTechs = computed(() => {
 </script>
 
 <template>
-  <template v-if="name && getTech(name) && !list">
-    <figure class="tech-container" :class="[props.class, getTech(name).name]"
-      :style="{ width: props.size ? props.size : '100px' }">
+  <template v-if="raw">
+    <template v-if="name && getTech(name) && !list">
       <component :is="getTech(name).icon" />
-      <figcaption :class="{ tooltip: hiddenLabel }">
-        {{ props.label ? props.label : getTech(name).name }}
-      </figcaption>
-    </figure>
+    </template>
+    <template v-else>
+      <component v-for="tech of listTechs" :key="tech.name" :is="tech.icon" />
+    </template>
   </template>
   <template v-else>
-    <section class="techs" :class="[props.class]">
-      <figure class="tech-container" :class="[tech.name.toLocaleLowerCase()]"
-        :style="{ width: props.size ? props.size : '100px' }" v-for="tech of listTechs" :key="tech.name">
-        <component :is="tech.icon" />
-        <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
+    <template v-if="name && getTech(name) && !list">
+      <figure class="tech-container" :class="[props.class, getTech(name).name]"
+        :style="{ width: props.size ? props.size : '100px' }">
+        <component :is="getTech(name).icon" />
+        <figcaption :class="{ tooltip: hiddenLabel }">
+          {{ props.label ? props.label : getTech(name).name }}
+        </figcaption>
       </figure>
-    </section>
+    </template>
+    <template v-else>
+      <section class="techs" :class="[props.class]">
+        <figure class="tech-container" :class="[tech.name.toLocaleLowerCase()]"
+          :style="{ width: props.size ? props.size : '100px' }" v-for="tech of listTechs" :key="tech.name">
+          <component :is="tech.icon" />
+          <figcaption :class="{ tooltip: hiddenLabel }">{{ tech.name }}</figcaption>
+        </figure>
+      </section>
+    </template>
   </template>
 </template>
 
@@ -74,6 +84,11 @@ figure.tech-container {
     height: 50px;
     margin-bottom: .2rem;
   }
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
 }
 
 figure {

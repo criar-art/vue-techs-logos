@@ -35,4 +35,7 @@ import VueTechsLogs from 'vue-techs-logos';
 
 // Modification of size component
 <VueTechsLogos name="javascript" size="220px" />
+
+// Mode raw
+<VueTechsLogos name="javascript" :raw="true" />
 ```
