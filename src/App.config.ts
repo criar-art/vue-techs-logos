@@ -6,6 +6,7 @@ export const configApp = {
   name: 'vue-techs-logos',
   npm: 'https://www.npmjs.com/package/vue-techs-logos',
   github: 'https://github.com/criar-art/vue-techs-logos',
+  linkedin: 'https://www.linkedin.com/in/lucasferreiralimax',
   appVersion,
   vueVersion,
   stepsInstall: [
