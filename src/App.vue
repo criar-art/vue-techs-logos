@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import VueTechsLogos from './components/VueTechsLogos.vue'
-import Nucleus from 'nucleus-vue'
+import Nucleus, { NucleusBox } from 'nucleus-vue'
 import techs from './techs'
 import { configApp } from './App.config'
 
@@ -14,12 +14,9 @@ const filteredArray = computed(() =>
 </script>
 
 <template>
-  <Nucleus
-    :config="configApp"
-  >
-  <div class="content example">
-    <h2>List of techs</h2>
-    <input type="text" class="input-search" v-model="search" placeholder="Search logos..." />
+  <Nucleus :config="configApp">
+    <NucleusBox class="example" title="List of techs">
+      <input type="text" class="input-search" v-model="search" placeholder="Search logos..." />
       <VueTechsLogos :list="filteredArray" />
       <div v-if="!filteredArray.length" class="not-found">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="100" height="100" viewBox="-20 0 190 190">
@@ -29,7 +26,7 @@ const filteredArray = computed(() =>
         </svg>
         <p>No logos found matching your search.</p>
       </div>
-  </div>
+    </NucleusBox>
   </Nucleus>
 </template>
 
